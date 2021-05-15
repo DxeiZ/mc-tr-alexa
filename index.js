@@ -9,7 +9,6 @@ client.on("ready", () => {
             name: `MC-TR Alexa`
         }
     })
-    console.log(client.ws.ping);
     console.log('Sistem hazır!');
 })
 
@@ -26,6 +25,7 @@ client.on('message', async message => {
                     message.channel.send(attachment)
                 })
                 } catch (error) {
+                    console.log(error)
                     message.channel.send("Lütfen tekrar deneyin, dosya oluşturulamadı.")
                 }
             setInterval(async () => {
